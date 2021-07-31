@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'StudentRegistration/base.html' %}
+{% block base_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+  <form method="post">
+    <table>
+    {{ form.as_table }}
+      {% csrf_token %}
+  </table>
+    <input type="submit" name="Submit" >
+    <button name="Reset" type="reset">Reset</button>
+  </form>
+
+</div>
+
+</body>
+{% endblock %}
+</html>
